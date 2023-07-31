@@ -86,6 +86,9 @@ section {
   margin: 0.1rem;
   cursor: pointer;
 }
+footer p {
+  text-align: center;
+}
 
 .navigationItems {
   list-style-type: none;
