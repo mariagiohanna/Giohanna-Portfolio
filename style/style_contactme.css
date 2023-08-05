@@ -1,0 +1,351 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --black: #303030;
+  --grey: #909090;
+  --off-white: #edeee9;
+  --code: #d8dbce;
+  --first-color: #c54c82;
+  --second-color: rgba(236, 114, 156, 0.5);
+  --third-color: #b643cd;
+  --fourth-color: #fdfdcb;
+  --footer-color: #61c1e2;
+  --contrast-color: rgb(27, 39, 93);
+}
+html {
+  position: relative;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background-color: var(--off-white);
+}
+
+body {
+  font-family: "Tektur", "Merriweather", "Work Sans", cursive;
+  background: linear-gradient(
+    -20deg,
+    rgb(233, 222, 250) 0%,
+    rgb(251, 252, 219) 100%
+  );
+  color: var(--black);
+  min-height: 100vh;
+  width: 100%;
+  padding: 2.5vh 10vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+h1,
+h2,
+nav {
+  font-family: "Press Start 2P", "Merriweather", "Work Sans", cursive;
+}
+
+a {
+  text-decoration: underline;
+  color: var(--black);
+}
+nav {
+  display: grid;
+  grid-template-areas:
+    "a b b d"
+    "c c c c";
+  grid-auto-rows: minmax(60px, auto);
+  grid-gap: 10px;
+  /* background-color: rgba(240, 248, 255, 0.5); */
+  /* border-radius: 0.5rem; */
+  padding: 0.1rem 1rem;
+  margin: 1rem;
+}
+nav li {
+  background-image: linear-gradient(
+    to right,
+    #e55d87 0%,
+    #5fc3e4 51%,
+    #e55d87 100%
+  );
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  border: none;
+  display: block;
+}
+#Logo {
+  grid-area: b;
+  text-align: center;
+  color: var(--first-color);
+  font-size: 2rem;
+}
+
+#LogoImg1 {
+  grid-area: a;
+  width: 7rem;
+  height: auto;
+  align-items: center;
+  justify-items: center;
+  border-radius: 1rem;
+}
+#LogoImg2 {
+  grid-area: d;
+  width: 7rem;
+  height: auto;
+  align-items: center;
+  justify-items: center;
+  border-radius: 1rem;
+}
+nav ul {
+  grid-area: c;
+  justify-content: space-between;
+  align-items: center;
+}
+footer p {
+  text-align: center;
+  font-family: "Handjet", "Press Start 2P", cursive;
+  font-size: 1.5rem;
+  margin: 0.4rem;
+}
+.navigationItems {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  padding: 0px;
+}
+.navigationItems a {
+  text-decoration: none;
+  color: #f4f1e7;
+  font-size: 1rem;
+}
+.navigationItems a:hover {
+  font-weight: bold;
+  color: var(--contrast-color);
+  cursor: pointer;
+}
+.navigationItems ul {
+  margin-right: 10px;
+}
+
+footer {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  background-color: var(--footer-color);
+  color: aliceblue;
+  border-radius: 0.5rem;
+  padding: 0.1rem 1rem;
+  margin: 0 1rem;
+}
+nav img {
+  margin: 0.6rem auto;
+}
+nav .btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  text-decoration: none;
+}
+
+/* #################### ################################ #################### */
+/* #################### RELEVANT CODE STARTS AT LINE 145 #################### */
+/* #################### ################################ #################### */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* Global Styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  position: relative;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background-color: var(--off-white);
+}
+
+body {
+  background-color: var(--off-white);
+  color: var(--black);
+  min-height: 100vh;
+  width: 100%;
+  padding: 2.5vh 10vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  h1 {
+    font-size: clamp(1rem, 6vw, 10rem);
+    margin: 15vh 0 2rem;
+  }
+
+  a {
+    text-decoration: underline;
+    color: var(--black);
+  }
+
+  code {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+    background-color: var(--code);
+  }
+
+  .explanation {
+    width: 100%;
+    margin-bottom: 15vh;
+    p {
+      font-size: 1rem;
+      max-width: 75ch;
+      margin: 2rem 0;
+    }
+
+    ul:last-child {
+      margin-bottom: 2rem;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+
+      li {
+        list-style: none;
+        position: relative;
+        margin: 0.5rem 0;
+        &::before {
+          content: "👉";
+          position: absolute;
+          top: -0.25rem;
+          left: -2rem;
+        }
+      }
+    }
+  }
+
+  .container {
+    width: 100%;
+    max-width: 768px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 2rem 1.5rem;
+    background-color: var(--code);
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .cta-form {
+      margin-bottom: 2rem;
+      text-align: center;
+
+      @media (min-width: 768px) {
+        margin-bottom: 1rem;
+        margin-right: 2rem;
+        text-align: left;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        width: 100%;
+        max-width: 25ch;
+        margin: 0 auto;
+        text-align: center;
+
+        @media (min-width: 768px) {
+          text-align: left;
+          margin: 0;
+        }
+      }
+
+      p {
+        margin-top: 2rem;
+        font-size: 1rem;
+        width: 100%;
+        max-width: 24ch;
+      }
+    }
+  }
+}
+
+.form {
+  align-self: center;
+}
+
+.form__input {
+  width: clamp(120px, 50vw, 420px);
+  height: 2.5rem;
+  padding: 0 1.25rem;
+  border: 1px solid var(--black);
+  border-radius: 2px;
+  margin: 0.625rem auto;
+  transition: all 250ms;
+  @media (min-width: 768px) {
+    width: clamp(120px, 35vw, 420px);
+  }
+
+  &:focus {
+    outline: none;
+    border-top-color: rgba(0, 0, 0, 0.1);
+  }
+
+  /* When the input field (.form__input) is in focus, 
+         transform the .form__label and change colors*/
+  /* ALSO, if the input field's placeholder is NOT shown (when the input field has content),
+         transform the .form__label and change colors. */
+  &:focus + .form__label,
+  &:not(:placeholder-shown) + .form__label {
+    transform: translateY(-4.5rem) scale(1);
+    color: var(--black);
+  }
+
+  /* THIS PART IS IMPORTANT!! */
+  /* The block below hides the placeholder entirely. */
+  /* For all intents and purposes, the placeholder no longer exists. */
+  /* What shows on the input field is only the label*. */
+  /* HOWEVER, the input fields still recognizes that the placeholder exists!*/
+  /* The placeholder is just invisible. We need the placeholder to exist for
+         some weird CSS stuff. If we skip this, we can't make it CSS-only. */
+  &::placeholder {
+    display: none;
+    color: transparent;
+  }
+
+  /* When the placeholder is NOT shown,
+         style the top border. */
+  /* This makes the top border fade-out when the placeholder disappears. */
+  &:not(:placeholder-shown) {
+    border-top-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.form__label {
+  font-size: 1rem;
+  color: var(--grey);
+  display: block;
+
+  /* Moves the label on TOP of the placeholder */
+  /* You'll need to change this as needed */
+  transform: translate(1.25rem, -2.5rem);
+  transform-origin: 0 0; /* Used later for transitions */
+  transition: all 500ms;
+
+  user-select: none; /* Safari */
+
+  /* THIS PART IS IMPORTANT! */
+  /* This line prevents the label from being selected.*/
+  /* This is crucial because if this line doesn't exist, users can
+         click on the label, instead of the input field. That's bad UX! */
+  pointer-events: none;
+}

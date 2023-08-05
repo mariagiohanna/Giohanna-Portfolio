@@ -140,7 +140,25 @@ footer p {
   font-size: 1.5rem;
   margin: 0.4rem;
 }
+.projects-container a,
+#projectMenuLink {
+  text-decoration: none;
+  color: rgb(88, 18, 93);
+  line-height: 1.2rem;
+}
 
+.projects-container li {
+  line-height: 1.2rem;
+}
+
+.projects-container div {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+.projects-container a:hover,
+#projectMenuLink {
+  font-weight: bold;
+}
 .navigationItems {
   list-style-type: none;
   display: flex;
@@ -212,4 +230,16 @@ footer p {
   #projects-and-skills {
     display: block;
   }
+}
+
+.projects-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#projects h2 {
+  text-align: center;
+}
+#projects ul {
+  padding: 1rem;
 }

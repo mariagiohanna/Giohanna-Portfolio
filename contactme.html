@@ -24,11 +24,11 @@
       src="https://kit.fontawesome.com/03de6e5eeb.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/style_contactme.css" />
   </head>
   <body>
     <nav>
-       <img id="LogoImg1" src="./style/images/LogoGM1.png" alt="Logo" />
+      <img id="LogoImg1" src="./style/images/LogoGM1.png" alt="Logo" />
       <h1 id="Logo">Giohanna Martinez</h1>
       <img id="LogoImg2" src="./style/images/LogoGM1.png" alt="Logo" />
       <ul class="navigationItems">
@@ -40,22 +40,43 @@
         <li><a href="#contact-details">Contact</a></li>
       </ul>
     </nav>
-      <section id="contact-details">
-        <h2>Contact</h2>
-        <a
-          href="https://www.linkedin.com/in/maria-giohanna-martinez/"
-          target="_blank"
-          ><i
-            class="fa-brands fa-linkedin contact-icon"
-            style="color: #ffffff"
-          ></i
-        ></a>
-        <i
-          class="fa-regular fa-envelope contact-icon"
+    <section id="contact-details">
+      <div class="container">
+        <div class="cta-form">
+          <h2>📬Contact me and let's talk</h2>
+          <p>Feal free to send me a message ✨</p>
+        </div>
+        <form action="" class="form">
+          <input type="text" placeholder="Name" class="form__input" id="name" />
+          <label for="name" class="form__label">Name</label>
+
+          <input
+            type="email"
+            placeholder="Email"
+            class="form__input"
+            id="email"
+          />
+          <label for="email" class="form__label">Email</label>
+
+          <input
+            type="text"
+            placeholder="Subject"
+            class="form__input"
+            id="subject"
+          />
+          <label for="subject" class="form__label">Subject</label>
+        </form>
+      </div>
+      <a
+        href="https://www.linkedin.com/in/maria-giohanna-martinez/"
+        target="_blank"
+        ><i
+          class="fa-brands fa-linkedin contact-icon"
           style="color: #ffffff"
-        ></i>
-      </section>
-    </div>
+        ></i
+      ></a>
+      <i class="fa-regular fa-envelope contact-icon" style="color: #ffffff"></i>
+    </section>
     <footer>
       <p>Made by Giohanna 🤖✨</p>
     </footer>
