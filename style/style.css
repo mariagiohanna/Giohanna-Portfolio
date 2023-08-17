@@ -234,15 +234,16 @@ footer p {
     display: block;
   }
 }
+@media only screen and (min-width: 800px) {
+  .projects-container {
+    display: flex;
+    justify-content: space-evenly;
+  }
 
-.projects-container {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-#projects h2 {
-  text-align: center;
-}
-#projects ul {
-  padding: 1rem;
+  #projects h2 {
+    text-align: center;
+  }
+  #projects ul {
+    padding: 1rem;
+  }
 }
