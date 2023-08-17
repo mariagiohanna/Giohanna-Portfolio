@@ -15,6 +15,7 @@
 @media only screen and (max-width: 800px) {
   nav {
     display: block;
+    width: 100%;
   }
   h1 {
     display: none;
@@ -24,6 +25,7 @@
     text-align: center;
   }
   .navigationItems {
+    width: 100%;
     text-align: center;
     padding-left: 0;
     list-style-type: none;
@@ -220,7 +222,8 @@ body {
   justify-content: center;
   align-items: flex-start;
 }
-h1 {
+
+#contact-details h1 {
   font-size: clamp(1rem, 6vw, 10rem);
   margin: 15vh 0 2rem;
 }
@@ -228,42 +231,6 @@ h1 {
 a {
   text-decoration: underline;
   color: var(--black);
-}
-
-code {
-  font-size: 1rem;
-  padding: 0 0.5rem;
-  background-color: var(--code);
-}
-
-.explanation {
-  width: 100%;
-  margin-bottom: 15vh;
-  p {
-    font-size: 1rem;
-    max-width: 75ch;
-    margin: 2rem 0;
-  }
-
-  ul:last-child {
-    margin-bottom: 2rem;
-  }
-  ul {
-    display: flex;
-    flex-direction: column;
-
-    li {
-      list-style: none;
-      position: relative;
-      margin: 0.5rem 0;
-      &::before {
-        content: "👉";
-        position: absolute;
-        top: -0.25rem;
-        left: -2rem;
-      }
-    }
-  }
 }
 
 .container {
@@ -316,11 +283,11 @@ code {
   }
 }
 
-.form {
+#contact-details .form {
   align-self: center;
 }
 
-.form__input {
+#contact-details .form__input {
   width: clamp(120px, 50vw, 420px);
   height: 2.5rem;
   padding: 0 1.25rem;
@@ -367,7 +334,7 @@ code {
   }
 }
 
-.form__label {
+#contact-details .form__label {
   font-size: 1rem;
   color: var(--grey);
   display: block;
