@@ -19,7 +19,33 @@
   h1 {
     display: none;
   }
+  h2,
+  h3 {
+    text-align: center;
+  }
+  .navigationItems {
+    text-align: center;
+    padding-left: 0;
+    list-style-type: none;
+    display: block;
+    line-height: 180%;
+  }
+
+  .navigationItems a {
+    margin: 1rem auto;
+    font-size: 1rem;
+  }
+  #LogoImg1 {
+    display: block;
+    margin: 1rem auto;
+    width: 12rem;
+    height: auto;
+  }
+  #LogoImg2 {
+    display: none;
+  }
 }
+
 html {
   position: relative;
   overflow-x: hidden;
@@ -55,17 +81,47 @@ a {
   text-decoration: underline;
   color: var(--black);
 }
-nav {
-  display: grid;
-  grid-template-areas:
-    "a b b d"
-    "c c c c";
-  grid-auto-rows: minmax(60px, auto);
-  grid-gap: 10px;
-  /* background-color: rgba(240, 248, 255, 0.5); */
-  /* border-radius: 0.5rem; */
-  padding: 0.1rem 1rem;
-  margin: 1rem;
+@media only screen and (min-width: 800px) {
+  #Logo {
+    grid-area: b;
+    text-align: center;
+    color: var(--first-color);
+    font-size: 2rem;
+  }
+
+  #LogoImg1 {
+    grid-area: a;
+    width: 7rem;
+    height: auto;
+    align-items: center;
+    justify-items: center;
+    border-radius: 1rem;
+  }
+  #LogoImg2 {
+    grid-area: d;
+    width: 7rem;
+    height: auto;
+    align-items: center;
+    justify-items: center;
+    border-radius: 1rem;
+  }
+  nav {
+    display: grid;
+    grid-template-areas:
+      "a b b d"
+      "c c c c";
+    grid-auto-rows: minmax(60px, auto);
+    grid-gap: 10px;
+    /* background-color: rgba(240, 248, 255, 0.5); */
+    /* border-radius: 0.5rem; */
+    padding: 0.1rem 1rem;
+    margin: 1rem;
+  }
+  nav ul {
+    grid-area: c;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 nav li {
   background-image: linear-gradient(
@@ -86,34 +142,7 @@ nav li {
   border: none;
   display: block;
 }
-#Logo {
-  grid-area: b;
-  text-align: center;
-  color: var(--first-color);
-  font-size: 2rem;
-}
 
-#LogoImg1 {
-  grid-area: a;
-  width: 7rem;
-  height: auto;
-  align-items: center;
-  justify-items: center;
-  border-radius: 1rem;
-}
-#LogoImg2 {
-  grid-area: d;
-  width: 7rem;
-  height: auto;
-  align-items: center;
-  justify-items: center;
-  border-radius: 1rem;
-}
-nav ul {
-  grid-area: c;
-  justify-content: space-between;
-  align-items: center;
-}
 footer p {
   text-align: center;
   font-family: "Handjet", "Press Start 2P", cursive;
@@ -146,7 +175,7 @@ footer {
   color: aliceblue;
   border-radius: 0.5rem;
   padding: 0.1rem 1rem;
-  margin: 0 1rem;
+  margin: 1rem 1rem;
 }
 nav img {
   margin: 0.6rem auto;
