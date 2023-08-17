@@ -12,6 +12,14 @@
   --footer-color: #61c1e2;
   --contrast-color: rgb(27, 39, 93);
 }
+@media only screen and (max-width: 800px) {
+  nav {
+    display: block;
+  }
+  h1 {
+    display: none;
+  }
+}
 html {
   position: relative;
   overflow-x: hidden;
