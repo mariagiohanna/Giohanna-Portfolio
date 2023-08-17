@@ -196,6 +196,9 @@ footer p {
   h3 {
     text-align: center;
   }
+  .WebsiteOnly {
+    display: none;
+  }
   .navigationItems,
   .projects-container ul {
     text-align: center;
