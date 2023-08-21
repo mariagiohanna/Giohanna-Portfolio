@@ -323,3 +323,6 @@ a {
   padding: 2rem;
   border-radius: 50%;
 }
+.contact-icon:hover {
+  color: var(--contrast-color) !important;
+}
