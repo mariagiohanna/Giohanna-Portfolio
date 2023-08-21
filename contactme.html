@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Giohanna Martinez</title>
+    <title>Front-End Developer - Giohanna Martinez</title>
     <link rel="icon" type="image/x-icon" href="./style/images/LogoGM1.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,42 +32,48 @@
       <h1 id="Logo">Giohanna Martinez</h1>
       <img id="LogoImg2" src="./style/images/LogoGM1.png" alt="Logo" />
       <ul class="navigationItems">
-        <li>
+        <li class="btn-grad">
           <a href="./index.html">About me</a>
         </li>
-        <li><a href="./projects.html">Projects</a></li>
-        <li><a href="./projects.html#skills">Skills</a></li>
-        <li><a href="#contact-details">Contact</a></li>
+        <li class="btn-grad"><a href="./projects.html">Projects</a></li>
+        <li class="btn-grad"><a href="./projects.html#skills">Skills</a></li>
+        <li class="btn-grad"><a href="#contact-details">Contact</a></li>
       </ul>
     </nav>
     <section id="contact-details">
-      <div class="container">
-        <div class="cta-form">
-          <h2>📬Contact me and let's talk</h2>
-          <p>Feal free to send me a message ✨</p>
+      <div>
+        <div class="container">
+          <div class="cta-form">
+            <h2>📬Contact me and let's talk</h2>
+            <p>Feal free to send me a message ✨</p>
+          </div>
+          <form action="" class="form">
+            <input
+              type="text"
+              placeholder="Name"
+              class="form__input"
+              id="name"
+            />
+            <label for="name" class="form__label">Name</label>
+
+            <input
+              type="email"
+              placeholder="Email"
+              class="form__input"
+              id="email"
+            />
+            <label for="email" class="form__label">Email</label>
+
+            <input
+              type="text"
+              placeholder="Subject"
+              class="form__input"
+              id="subject"
+            />
+            <label for="subject" class="form__label">Subject</label>
+          </form>
         </div>
-        <form action="" class="form">
-          <input type="text" placeholder="Name" class="form__input" id="name" />
-          <label for="name" class="form__label">Name</label>
-
-          <input
-            type="email"
-            placeholder="Email"
-            class="form__input"
-            id="email"
-          />
-          <label for="email" class="form__label">Email</label>
-
-          <input
-            type="text"
-            placeholder="Subject"
-            class="form__input"
-            id="subject"
-          />
-          <label for="subject" class="form__label">Subject</label>
-        </form>
-      </div>
-      <!-- <a
+        <!-- <a
         href="https://www.linkedin.com/in/maria-giohanna-martinez/"
         target="_blank"
         ><i
@@ -76,6 +82,7 @@
         ></i
       ></a>
       <i class="fa-regular fa-envelope contact-icon" style="color: #ffffff"></i> -->
+      </div>
     </section>
     <footer>
       <p>Made by Giohanna 🤖✨</p>

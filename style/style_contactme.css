@@ -52,25 +52,18 @@ html {
   position: relative;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  background-color: var(--off-white);
-}
-
-body {
-  font-family: "Tektur", "Merriweather", "Work Sans", cursive;
   background: linear-gradient(
     -20deg,
     rgb(233, 222, 250) 0%,
     rgb(251, 252, 219) 100%
   );
-  color: var(--black);
-  min-height: 100vh;
-  width: 100%;
-  padding: 2.5vh 10vw;
+  min-height: 100%;
+}
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+body {
+  font-family: "Tektur", "Merriweather", "Work Sans", cursive;
+  color: var(--black);
+  width: 100%;
 }
 
 h1,
@@ -83,7 +76,7 @@ a {
   text-decoration: underline;
   color: var(--black);
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 801px) {
   #Logo {
     grid-area: b;
     text-align: center;
@@ -124,6 +117,13 @@ a {
     justify-content: space-between;
     align-items: center;
   }
+  .navigationItems {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    min-width: 250px;
+  }
 }
 nav li {
   background-image: linear-gradient(
@@ -144,6 +144,10 @@ nav li {
   border: none;
   display: block;
 }
+nav .btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  text-decoration: none;
+}
 
 footer p {
   text-align: center;
@@ -151,12 +155,7 @@ footer p {
   font-size: 1.5rem;
   margin: 0.4rem;
 }
-.navigationItems {
-  list-style-type: none;
-  display: flex;
-  align-items: center;
-  padding: 0px;
-}
+
 .navigationItems a {
   text-decoration: none;
   color: #f4f1e7;
@@ -172,55 +171,28 @@ footer p {
 }
 
 footer {
-  align-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   background-color: var(--footer-color);
   color: aliceblue;
   border-radius: 0.5rem;
   padding: 0.1rem 1rem;
-  margin: 1rem 1rem;
+  margin-top: 4rem;
 }
 nav img {
   margin: 0.6rem auto;
 }
-nav .btn-grad:hover {
-  background-position: right center; /* change the direction of the change here */
-  text-decoration: none;
-}
-
-/* #################### ################################ #################### */
-/* #################### RELEVANT CODE STARTS AT LINE 145 #################### */
-/* #################### ################################ #################### */
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-/* Global Styles */
-*,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-}
-
-html {
-  position: relative;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-  background-color: var(--off-white);
-}
-
-body {
-  background-color: var(--off-white);
-  color: var(--black);
-  min-height: 100vh;
-  width: 100%;
-  padding: 2.5vh 10vw;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
 }
 
 #contact-details h1 {
@@ -234,18 +206,26 @@ a {
 }
 
 .container {
-  width: 100%;
-  max-width: 768px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem 2rem 1.5rem;
   background-color: var(--second-color);
-
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   @media (min-width: 768px) {
     flex-direction: row;
     align-items: center;
+    margin-left: 2.5rem;
+    margin-top: 3rem;
+    max-width: 768px;
+    padding: 2rem 2rem 1.5rem;
+  }
+  @media (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+    width: 100%;
   }
 
   .cta-form {
@@ -263,23 +243,23 @@ a {
       text-align: left;
       margin: 0;
     }
-  }
 
-  .cta-form h2 {
-    font-size: 1.5rem;
-    width: 100%;
-    max-width: 25ch;
-    margin: 0 auto;
-    text-align: center;
-    padding-bottom: 1rem;
-    line-height: 1.7;
-  }
+    .cta-form h2 {
+      font-size: 1.5rem;
+      width: 100%;
+      max-width: 25ch;
+      margin: 0 auto;
+      text-align: center;
+      padding-bottom: 1rem;
+      line-height: 1.7;
+    }
 
-  .cta-form p {
-    margin-top: 2rem;
-    font-size: 1rem;
-    width: 100%;
-    max-width: 24ch;
+    .cta-form p {
+      margin-top: 2rem;
+      font-size: 1rem;
+      width: 100%;
+      max-width: 24ch;
+    }
   }
 }
 
@@ -304,31 +284,17 @@ a {
     border-top-color: rgba(0, 0, 0, 0.1);
   }
 
-  /* When the input field (.form__input) is in focus, 
-         transform the .form__label and change colors*/
-  /* ALSO, if the input field's placeholder is NOT shown (when the input field has content),
-         transform the .form__label and change colors. */
   &:focus + .form__label,
   &:not(:placeholder-shown) + .form__label {
     transform: translateY(-4.5rem) scale(1);
     color: var(--black);
   }
 
-  /* THIS PART IS IMPORTANT!! */
-  /* The block below hides the placeholder entirely. */
-  /* For all intents and purposes, the placeholder no longer exists. */
-  /* What shows on the input field is only the label*. */
-  /* HOWEVER, the input fields still recognizes that the placeholder exists!*/
-  /* The placeholder is just invisible. We need the placeholder to exist for
-         some weird CSS stuff. If we skip this, we can't make it CSS-only. */
   &::placeholder {
     display: none;
     color: transparent;
   }
 
-  /* When the placeholder is NOT shown,
-         style the top border. */
-  /* This makes the top border fade-out when the placeholder disappears. */
   &:not(:placeholder-shown) {
     border-top-color: rgba(0, 0, 0, 0.5);
   }
@@ -338,18 +304,9 @@ a {
   font-size: 1rem;
   color: var(--grey);
   display: block;
-
-  /* Moves the label on TOP of the placeholder */
-  /* You'll need to change this as needed */
   transform: translate(1.25rem, -2.5rem);
   transform-origin: 0 0; /* Used later for transitions */
   transition: all 500ms;
-
   user-select: none; /* Safari */
-
-  /* THIS PART IS IMPORTANT! */
-  /* This line prevents the label from being selected.*/
-  /* This is crucial because if this line doesn't exist, users can
-         click on the label, instead of the input field. That's bad UX! */
   pointer-events: none;
 }
