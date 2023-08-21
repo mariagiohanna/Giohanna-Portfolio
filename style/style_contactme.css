@@ -310,3 +310,16 @@ a {
   user-select: none; /* Safari */
   pointer-events: none;
 }
+.contactIcons {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-around;
+}
+.contact-icon {
+  font-size: 3rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 50%;
+}

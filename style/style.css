@@ -303,3 +303,17 @@ footer p {
     padding: 1rem;
   }
 }
+.skills-container {
+  text-align: center;
+}
+#skills-icon {
+  display: flex;
+  justify-content: space-evenly;
+}
+#skills {
+  border-radius: 1rem;
+  margin-top: 3rem;
+  border: var(--footer-color) solid 2px;
+  background-color: white;
+  margin: 2rem 3rem;
+}
